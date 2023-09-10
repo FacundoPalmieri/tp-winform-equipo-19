@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Winform_App
 {
-    public partial class Bienvenido : Form
+    public partial class Menu : Form
     {
-        public Bienvenido()
+        public Menu()
         {
             InitializeComponent();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
