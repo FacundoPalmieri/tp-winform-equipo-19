@@ -37,14 +37,45 @@ namespace Winform_App
             try
             {
                ListaArticulo = Negocio.Listar();
-                dgv_Articulos.DataSource = ListaArticulo;
+               dgv_Articulos.DataSource = ListaArticulo;
+               dgv_Articulos.Columns["Imagen"].Visible = false;
+               CargarImagen(ListaArticulo[0].Imagen);
 
             }
             catch (Exception ex)
             {
 
+
+
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void dgv_Articulos_SelectionChanged(object sender, EventArgs e)
+        {
+            
+          Articulo Seleccionado = (Articulo) dgv_Articulos.CurrentRow.DataBoundItem;
+          CargarImagen(Seleccionado.Imagen);
+        }
+
+        private void CargarImagen(string Imagen)
+        {
+            try
+            {
+               pb_Articulos.Load(Imagen);
+
+            }
+            catch (Exception ex)
+            {
+
+                pb_Articulos.Load("https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg");
+            }
+        }
+
+        private void button_Agregar_Click(object sender, EventArgs e)
+        {
+            AltaArticulo Alta = new AltaArticulo();
+            Alta.ShowDialog();
         }
     }
 }

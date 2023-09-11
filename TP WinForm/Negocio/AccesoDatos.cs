@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Security.Cryptography.X509Certificates;
+using System.Security.Policy;
 
 namespace Negocio
 {
@@ -45,6 +46,28 @@ namespace Negocio
                 throw ex;
             }
         }
+
+        public void EjectuarAccion()
+        {
+            Comando.Connection = Conexion;
+            try
+            {
+                Conexion.Open();
+                Comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+        public void SetearParametro(string Nombre, Object Valor)
+        {
+            Comando.Parameters.AddWithValue(Nombre, Valor);
+        }
+
         public void CerrarConexion()
         {
             if (Lector != null)
