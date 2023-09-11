@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio;
 
 namespace Winform_App
 {
@@ -27,10 +28,16 @@ namespace Winform_App
             Menu Ventana = new Menu();
             Ventana.MdiParent = this;
             Ventana.Show();
-            button_Comenzar.Visible = false;
+            button_Comenzar.Visible= false;
+            
            
+     
+                    
+        }
 
-           
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

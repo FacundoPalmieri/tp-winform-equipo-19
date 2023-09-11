@@ -34,7 +34,6 @@
             // 
             // button_Comenzar
             // 
-            this.button_Comenzar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.button_Comenzar.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button_Comenzar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Comenzar.ForeColor = System.Drawing.Color.SteelBlue;
@@ -45,7 +44,6 @@
             this.button_Comenzar.Text = "Comenzar  =)";
             this.button_Comenzar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button_Comenzar.UseVisualStyleBackColor = false;
-            this.button_Comenzar.VisibleChanged += new System.EventHandler(this.Bienvenido_Load);
             this.button_Comenzar.Click += new System.EventHandler(this.button_Comenzar_Click);
             // 
             // Inicio
