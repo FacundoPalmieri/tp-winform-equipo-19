@@ -18,7 +18,11 @@ namespace Negocio
 
             try
             {
+<<<<<<< HEAD
                 datos.SetearConsulta("SELECT A.Codigo, A.Nombre, A.Descripcion, M.Descripcion, I.ImagenUrl, A.Precio, C.Descripcion from ARTICULOS A left join MARCAS M on A.IdMarca = M.Id left join CATEGORIAS C on A.IdCategoria = C.Id  left join IMAGENES I on I.IdArticulo = A.Id");
+=======
+                datos.SetearConsulta("SELECT  A.Codigo, A.Nombre,A.Descripcion,M.Descripcion,I.ImagenUrl,A.Precio,C.Descripcion from ARTICULOS A inner join MARCAS M on A.IdMarca = M.Id inner join CATEGORIAS C on A.IdCategoria = C.Id inner join IMAGENES I on I.IdArticulo = A.Id");
+>>>>>>> 34107f788dcf4214e21d732242e69d1ec72e2cd2
                 datos.EjecutarConsulta();
 
                 while (datos.lector.Read())
@@ -31,8 +35,12 @@ namespace Negocio
                     Aux.Imagen = (string)datos.lector["ImagenUrl"];
                     Aux.Precio = (decimal)datos.lector["Precio"];
                     Aux.Tipo = new Categoria();
+<<<<<<< HEAD
                     if(!(datos.lector.IsDBNull(datos.lector.GetOrdinal("Descripcion"))))
                         Aux.Tipo.Descripcion = (string) datos.lector["Descripcion"];
+=======
+                    Aux.Tipo.Descripcion = (string) datos.lector["Descripcion"];
+>>>>>>> 34107f788dcf4214e21d732242e69d1ec72e2cd2
 
                     Lista.Add(Aux);   
                 }
