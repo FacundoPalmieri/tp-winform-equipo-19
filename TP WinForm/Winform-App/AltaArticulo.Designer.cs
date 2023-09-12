@@ -148,6 +148,7 @@
             // 
             // comboBox_Marca
             // 
+            this.comboBox_Marca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Marca.FormattingEnabled = true;
             this.comboBox_Marca.Location = new System.Drawing.Point(109, 162);
             this.comboBox_Marca.Name = "comboBox_Marca";
@@ -156,8 +157,9 @@
             // 
             // comboBox_Categoria
             // 
+            this.comboBox_Categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Categoria.FormattingEnabled = true;
-            this.comboBox_Categoria.Location = new System.Drawing.Point(109, 201);
+            this.comboBox_Categoria.Location = new System.Drawing.Point(109, 198);
             this.comboBox_Categoria.Name = "comboBox_Categoria";
             this.comboBox_Categoria.Size = new System.Drawing.Size(121, 21);
             this.comboBox_Categoria.TabIndex = 13;

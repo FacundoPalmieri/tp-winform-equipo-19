@@ -38,15 +38,15 @@
             // dgv_Articulos
             // 
             this.dgv_Articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Articulos.Location = new System.Drawing.Point(39, 63);
+            this.dgv_Articulos.Location = new System.Drawing.Point(21, 49);
             this.dgv_Articulos.Name = "dgv_Articulos";
-            this.dgv_Articulos.Size = new System.Drawing.Size(495, 163);
+            this.dgv_Articulos.Size = new System.Drawing.Size(640, 200);
             this.dgv_Articulos.TabIndex = 0;
             this.dgv_Articulos.SelectionChanged += new System.EventHandler(this.dgv_Articulos_SelectionChanged);
             // 
             // pb_Articulos
             // 
-            this.pb_Articulos.Location = new System.Drawing.Point(573, 78);
+            this.pb_Articulos.Location = new System.Drawing.Point(682, 84);
             this.pb_Articulos.Name = "pb_Articulos";
             this.pb_Articulos.Size = new System.Drawing.Size(200, 124);
             this.pb_Articulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -55,7 +55,7 @@
             // 
             // button_Agregar
             // 
-            this.button_Agregar.Location = new System.Drawing.Point(39, 255);
+            this.button_Agregar.Location = new System.Drawing.Point(21, 255);
             this.button_Agregar.Name = "button_Agregar";
             this.button_Agregar.Size = new System.Drawing.Size(75, 23);
             this.button_Agregar.TabIndex = 2;

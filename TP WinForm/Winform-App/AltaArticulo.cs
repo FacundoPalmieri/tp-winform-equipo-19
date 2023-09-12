@@ -35,6 +35,8 @@ namespace Winform_App
                 articulo.Nombre = textBox_Nombre.Text;
                 articulo.Descripcion = textBox_Descripcion.Text;
                 articulo.Precio = decimal.Parse(textBox_Precio.Text);
+                articulo.marca =(Marca) comboBox_Marca.SelectedItem;
+                articulo.categoria = (Categoria)comboBox_Categoria.SelectedItem;
                 negocio.Agregar(articulo);
                 MessageBox.Show("Agregado exitosamente");
                 Close();

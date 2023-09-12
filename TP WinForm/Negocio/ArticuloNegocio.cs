@@ -30,7 +30,12 @@ namespace Negocio
                     Aux.Descripcion = (string)datos.lector["Descripcion"];
                     Aux.marca = new Marca();
                     Aux.marca.Descripcion = (string)datos.lector["Marca"];
-                    Aux.Imagen = (string)datos.lector["ImagenUrl"];
+
+                    if (!(datos.lector.IsDBNull(datos.lector.GetOrdinal("ImagenUrl"))))
+                    {
+                       Aux.Imagen = (string)datos.lector["ImagenUrl"];
+
+                    }
                     Aux.Precio = (decimal) datos.lector["Precio"];
                     Aux.categoria = new Categoria();
 
