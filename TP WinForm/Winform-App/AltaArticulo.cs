@@ -46,5 +46,21 @@ namespace Winform_App
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void AltaArticulo_Load(object sender, EventArgs e)
+        {
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            try
+            {
+                comboBox_Marca.DataSource = marcaNegocio.listar();
+                comboBox_Categoria.DataSource = categoriaNegocio.listar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
     }
 }
