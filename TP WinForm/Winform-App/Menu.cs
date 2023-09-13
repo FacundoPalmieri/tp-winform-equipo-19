@@ -34,19 +34,18 @@ namespace Winform_App
         private void Cargar()
         {
             ArticuloNegocio Negocio = new ArticuloNegocio();
+
             try
             {
                ListaArticulo = Negocio.Listar();
                dgv_Articulos.DataSource = ListaArticulo;
+               //dgv_Articulos.Columns["Id"].Visible = false; *Ver porqué no funciona
                dgv_Articulos.Columns["Imagen"].Visible = false;
                CargarImagen(ListaArticulo[0].Imagen);
 
             }
             catch (Exception ex)
             {
-
-
-
                 MessageBox.Show(ex.ToString());
             }
         }
@@ -76,6 +75,27 @@ namespace Winform_App
         {
             AltaArticulo Alta = new AltaArticulo();
             Alta.ShowDialog();
+            Cargar();
+        }
+
+        private void button_modificar_Click(object sender, EventArgs e)
+        {
+            Articulo Seleccionado;
+            Seleccionado = (Articulo)dgv_Articulos.CurrentRow.DataBoundItem;
+            AltaArticulo Modificar = new AltaArticulo(Seleccionado);
+            Modificar.ShowDialog();
+            Cargar();
+
+        }
+
+        private void button_cerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void dgv_Articulos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
