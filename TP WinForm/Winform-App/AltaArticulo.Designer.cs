@@ -42,6 +42,10 @@
             this.label_Categoría = new System.Windows.Forms.Label();
             this.comboBox_Marca = new System.Windows.Forms.ComboBox();
             this.comboBox_Categoria = new System.Windows.Forms.ComboBox();
+            this.label_Imagen = new System.Windows.Forms.Label();
+            this.textBox_URLimagen = new System.Windows.Forms.TextBox();
+            this.pictureBox_Imagen = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // label_Código
@@ -110,7 +114,7 @@
             // 
             // button_Aceptar
             // 
-            this.button_Aceptar.Location = new System.Drawing.Point(47, 246);
+            this.button_Aceptar.Location = new System.Drawing.Point(39, 260);
             this.button_Aceptar.Name = "button_Aceptar";
             this.button_Aceptar.Size = new System.Drawing.Size(75, 23);
             this.button_Aceptar.TabIndex = 8;
@@ -120,7 +124,7 @@
             // 
             // button_Cancelar
             // 
-            this.button_Cancelar.Location = new System.Drawing.Point(210, 246);
+            this.button_Cancelar.Location = new System.Drawing.Point(202, 260);
             this.button_Cancelar.Name = "button_Cancelar";
             this.button_Cancelar.Size = new System.Drawing.Size(75, 23);
             this.button_Cancelar.TabIndex = 9;
@@ -131,7 +135,7 @@
             // label_Marca
             // 
             this.label_Marca.AutoSize = true;
-            this.label_Marca.Location = new System.Drawing.Point(51, 165);
+            this.label_Marca.Location = new System.Drawing.Point(51, 193);
             this.label_Marca.Name = "label_Marca";
             this.label_Marca.Size = new System.Drawing.Size(37, 13);
             this.label_Marca.TabIndex = 10;
@@ -140,7 +144,7 @@
             // label_Categoría
             // 
             this.label_Categoría.AutoSize = true;
-            this.label_Categoría.Location = new System.Drawing.Point(34, 201);
+            this.label_Categoría.Location = new System.Drawing.Point(34, 229);
             this.label_Categoría.Name = "label_Categoría";
             this.label_Categoría.Size = new System.Drawing.Size(54, 13);
             this.label_Categoría.TabIndex = 11;
@@ -150,7 +154,7 @@
             // 
             this.comboBox_Marca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Marca.FormattingEnabled = true;
-            this.comboBox_Marca.Location = new System.Drawing.Point(109, 162);
+            this.comboBox_Marca.Location = new System.Drawing.Point(109, 190);
             this.comboBox_Marca.Name = "comboBox_Marca";
             this.comboBox_Marca.Size = new System.Drawing.Size(121, 21);
             this.comboBox_Marca.TabIndex = 12;
@@ -159,16 +163,46 @@
             // 
             this.comboBox_Categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Categoria.FormattingEnabled = true;
-            this.comboBox_Categoria.Location = new System.Drawing.Point(109, 198);
+            this.comboBox_Categoria.Location = new System.Drawing.Point(109, 226);
             this.comboBox_Categoria.Name = "comboBox_Categoria";
             this.comboBox_Categoria.Size = new System.Drawing.Size(121, 21);
             this.comboBox_Categoria.TabIndex = 13;
+            // 
+            // label_Imagen
+            // 
+            this.label_Imagen.AutoSize = true;
+            this.label_Imagen.Location = new System.Drawing.Point(44, 157);
+            this.label_Imagen.Name = "label_Imagen";
+            this.label_Imagen.Size = new System.Drawing.Size(42, 13);
+            this.label_Imagen.TabIndex = 14;
+            this.label_Imagen.Text = "Imagen";
+            this.label_Imagen.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // textBox_URLimagen
+            // 
+            this.textBox_URLimagen.Location = new System.Drawing.Point(109, 157);
+            this.textBox_URLimagen.Name = "textBox_URLimagen";
+            this.textBox_URLimagen.Size = new System.Drawing.Size(121, 20);
+            this.textBox_URLimagen.TabIndex = 15;
+            this.textBox_URLimagen.Leave += new System.EventHandler(this.textBox_URLimagen_Leave);
+            // 
+            // pictureBox_Imagen
+            // 
+            this.pictureBox_Imagen.Location = new System.Drawing.Point(283, 19);
+            this.pictureBox_Imagen.Name = "pictureBox_Imagen";
+            this.pictureBox_Imagen.Size = new System.Drawing.Size(205, 218);
+            this.pictureBox_Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Imagen.TabIndex = 16;
+            this.pictureBox_Imagen.TabStop = false;
             // 
             // AltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 306);
+            this.ClientSize = new System.Drawing.Size(537, 314);
+            this.Controls.Add(this.pictureBox_Imagen);
+            this.Controls.Add(this.textBox_URLimagen);
+            this.Controls.Add(this.label_Imagen);
             this.Controls.Add(this.comboBox_Categoria);
             this.Controls.Add(this.comboBox_Marca);
             this.Controls.Add(this.label_Categoría);
@@ -187,6 +221,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaArticulo";
             this.Load += new System.EventHandler(this.AltaArticulo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Imagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +243,8 @@
         private System.Windows.Forms.Label label_Categoría;
         private System.Windows.Forms.ComboBox comboBox_Marca;
         private System.Windows.Forms.ComboBox comboBox_Categoria;
+        private System.Windows.Forms.Label label_Imagen;
+        private System.Windows.Forms.TextBox textBox_URLimagen;
+        private System.Windows.Forms.PictureBox pictureBox_Imagen;
     }
 }

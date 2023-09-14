@@ -41,7 +41,7 @@ namespace Winform_App
                dgv_Articulos.DataSource = ListaArticulo;
                //dgv_Articulos.Columns["Id"].Visible = false; *Ver porqué no funciona
                dgv_Articulos.Columns["Imagen"].Visible = false;
-               CargarImagen(ListaArticulo[0].Imagen);
+               CargarImagen(ListaArticulo[0].imagen.ImagenUrl);
 
             }
             catch (Exception ex)
@@ -54,7 +54,7 @@ namespace Winform_App
         {
             
           Articulo Seleccionado = (Articulo) dgv_Articulos.CurrentRow.DataBoundItem;
-          CargarImagen(Seleccionado.Imagen);
+          CargarImagen(Seleccionado.imagen.ImagenUrl);
         }
 
         private void CargarImagen(string Imagen)

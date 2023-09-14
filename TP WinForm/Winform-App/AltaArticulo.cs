@@ -36,6 +36,7 @@ namespace Winform_App
         {
             
             ArticuloNegocio negocio = new ArticuloNegocio();
+            ImagenNegocio imagenNegocio = new ImagenNegocio(); 
 
             try
             {
@@ -43,13 +44,17 @@ namespace Winform_App
                     articulo = new Articulo();
                 
                 articulo.CodigoArticulo = textBox_Codigo.Text;
+                Console.WriteLine("articulo.CodigoArticulo: " + articulo.CodigoArticulo);
                 articulo.Nombre = textBox_Nombre.Text;
                 articulo.Descripcion = textBox_Descripcion.Text;
                 articulo.Precio = decimal.Parse(textBox_Precio.Text);
                 articulo.marca =(Marca) comboBox_Marca.SelectedItem;
                 articulo.categoria = (Categoria)comboBox_Categoria.SelectedItem;
 
-
+                Imagen imagen = new Imagen();
+                articulo.imagen = imagen;
+                articulo.imagen.ImagenUrl = textBox_URLimagen.Text;
+ 
                 if (articulo.Id != 0)
                 {
                     negocio.Modificar(articulo);
@@ -59,6 +64,10 @@ namespace Winform_App
                 else
                 {
                     negocio.Agregar(articulo);
+                    int id = negocio.BuscarId(articulo);
+                    //Console.WriteLine("BUSCAR Id: " + id);
+
+                    imagenNegocio.Agregar(articulo, id);
                     MessageBox.Show("Agregado exitosamente");
                 }
 
@@ -92,6 +101,7 @@ namespace Winform_App
                     textBox_Nombre.Text = articulo.Nombre;
                     textBox_Descripcion.Text = articulo.Descripcion;
                     textBox_Precio.Text = articulo.Precio.ToString();
+                    textBox_URLimagen.Text = articulo.imagen.ImagenUrl.ToString();
                     comboBox_Marca.SelectedValue = articulo.marca.Id;
                     comboBox_Categoria.SelectedValue = articulo.categoria.Id;
                 }
@@ -102,5 +112,31 @@ namespace Winform_App
             }
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_URLimagen_Leave(object sender, EventArgs e)
+        {
+            CargarImagen(textBox_URLimagen.Text);
+
+        }
+
+        private void CargarImagen(string Imagen)
+        {
+            try
+            {
+                pictureBox_Imagen.Load(Imagen);
+
+            }
+            catch (Exception ex)
+            {
+
+                pictureBox_Imagen.Load("https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg");
+            }
+        }
+
     }
 }
