@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_Articulos = new System.Windows.Forms.DataGridView();
             this.pb_Articulos = new System.Windows.Forms.PictureBox();
             this.button_Agregar = new System.Windows.Forms.Button();
@@ -43,14 +43,14 @@
             // dgv_Articulos
             // 
             this.dgv_Articulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Articulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Articulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Articulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Articulos.GridColor = System.Drawing.Color.Black;
@@ -76,8 +76,8 @@
             // 
             // button_Agregar
             // 
-            this.button_Agregar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_Agregar.Location = new System.Drawing.Point(20, 307);
+            this.button_Agregar.ForeColor = System.Drawing.Color.Black;
+            this.button_Agregar.Location = new System.Drawing.Point(21, 307);
             this.button_Agregar.Name = "button_Agregar";
             this.button_Agregar.Size = new System.Drawing.Size(75, 23);
             this.button_Agregar.TabIndex = 2;
@@ -113,6 +113,7 @@
             this.button1_eliminarFisico.TabIndex = 5;
             this.button1_eliminarFisico.Text = "Eliminar Físico";
             this.button1_eliminarFisico.UseVisualStyleBackColor = false;
+            this.button1_eliminarFisico.Click += new System.EventHandler(this.button1_eliminarFisico_Click);
             // 
             // button1_eliminarLogico
             // 
@@ -128,11 +129,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 461);
-            this.Controls.Add(this.button1_eliminarLogico);
-            this.Controls.Add(this.button1_eliminarFisico);
-            this.Controls.Add(this.button_cerrar);
-            this.Controls.Add(this.button_modificar);
             this.Controls.Add(this.button_Agregar);
+            this.Controls.Add(this.button_modificar);
+            this.Controls.Add(this.button1_eliminarFisico);
+            this.Controls.Add(this.button1_eliminarLogico);
+            this.Controls.Add(this.button_cerrar);
             this.Controls.Add(this.pb_Articulos);
             this.Controls.Add(this.dgv_Articulos);
             this.MaximumSize = new System.Drawing.Size(950, 500);
