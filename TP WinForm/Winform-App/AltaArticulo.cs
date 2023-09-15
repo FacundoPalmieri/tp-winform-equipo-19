@@ -58,6 +58,11 @@ namespace Winform_App
                 if (articulo.Id != 0)
                 {
                     negocio.Modificar(articulo);
+                    
+                    int id = articulo.Id;
+                    Console.WriteLine("Nueva url: " + articulo.imagen.ImagenUrl);
+
+                    imagenNegocio.Modificar(articulo, id);
                     MessageBox.Show("Modificado exitosamente");
                 }
 

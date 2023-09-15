@@ -68,5 +68,30 @@ namespace Negocio
 
         }
 
+        public void Modificar(Articulo articulo, int articuloId)
+        {
+            AccesoDatos Datos = new AccesoDatos();
+
+            try
+            {
+
+                Datos.SetearConsulta("update IMAGENES set ImagenUrl = @ImagenUrl where IdArticulo = '" + articuloId + "'");
+                Datos.SetearParametro("@ImagenUrl", articulo.imagen.ImagenUrl);
+
+
+                Datos.EjectuarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Datos.CerrarConexion();
+
+            }
+        }
+
     }
 }

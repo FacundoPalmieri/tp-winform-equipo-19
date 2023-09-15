@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
@@ -109,14 +110,24 @@ namespace Negocio
 
             try
             {
-                Datos.SetearConsulta("update ARTICULOS set Codigo = @CodigoArticulo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, Precio = @Precio, IdArticulo = @IdImagen where Id = @Id");
+                Datos.SetearConsulta("update ARTICULOS set Codigo = @CodigoArticulo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, Precio = @Precio where Id = @Id");
                 Datos.SetearParametro("@CodigoArticulo", articulo.CodigoArticulo);
                 Datos.SetearParametro("@Nombre", articulo.Nombre);
                 Datos.SetearParametro("@Descripcion", articulo.Descripcion);
                 Datos.SetearParametro("@IdMarca", articulo.marca.Id);
-                Datos.SetearParametro("@IdCategoria", articulo.categoria.Id);
+
+                if (articulo.categoria != null)
+                {
+                    Datos.SetearParametro("@IdCategoria", articulo.categoria.Id);
+                }
+
+                else
+                {
+                    Datos.SetearParametro("@IdCategoria", DBNull.Value);
+                }
+
+
                 Datos.SetearParametro("@Precio", articulo.Precio);
-                Datos.SetearParametro("@IdImagen", articulo.imagen.Id);
                 Datos.SetearParametro("@Id", articulo.Id);
 
                 Datos.EjectuarAccion();
