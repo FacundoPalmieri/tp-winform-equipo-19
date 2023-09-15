@@ -184,6 +184,7 @@
             this.textBox_URLimagen.Name = "textBox_URLimagen";
             this.textBox_URLimagen.Size = new System.Drawing.Size(121, 20);
             this.textBox_URLimagen.TabIndex = 15;
+            this.textBox_URLimagen.TextChanged += new System.EventHandler(this.textBox_URLimagen_TextChanged);
             this.textBox_URLimagen.Leave += new System.EventHandler(this.textBox_URLimagen_Leave);
             // 
             // pictureBox_Imagen

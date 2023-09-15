@@ -107,6 +107,7 @@ namespace Winform_App
                     textBox_Descripcion.Text = articulo.Descripcion;
                     textBox_Precio.Text = articulo.Precio.ToString();
                     textBox_URLimagen.Text = articulo.imagen.ImagenUrl.ToString();
+                    CargarImagen(articulo.imagen.ImagenUrl);
                     comboBox_Marca.SelectedValue = articulo.marca.Id;
                     comboBox_Categoria.SelectedValue = articulo.categoria.Id;
                 }
@@ -143,5 +144,9 @@ namespace Winform_App
             }
         }
 
+        private void textBox_URLimagen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

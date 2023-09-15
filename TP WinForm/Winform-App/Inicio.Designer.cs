@@ -37,9 +37,9 @@
             this.button_Comenzar.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button_Comenzar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Comenzar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button_Comenzar.Location = new System.Drawing.Point(306, 300);
+            this.button_Comenzar.Location = new System.Drawing.Point(297, 379);
             this.button_Comenzar.Name = "button_Comenzar";
-            this.button_Comenzar.Size = new System.Drawing.Size(290, 53);
+            this.button_Comenzar.Size = new System.Drawing.Size(341, 70);
             this.button_Comenzar.TabIndex = 1;
             this.button_Comenzar.Text = "Comenzar  =)";
             this.button_Comenzar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -53,13 +53,13 @@
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(894, 365);
+            this.ClientSize = new System.Drawing.Size(934, 461);
             this.Controls.Add(this.button_Comenzar);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.IsMdiContainer = true;
-            this.MaximumSize = new System.Drawing.Size(910, 404);
-            this.MinimumSize = new System.Drawing.Size(910, 404);
+            this.MaximumSize = new System.Drawing.Size(950, 500);
+            this.MinimumSize = new System.Drawing.Size(950, 500);
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
