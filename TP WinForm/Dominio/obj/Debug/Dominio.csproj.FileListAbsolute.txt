@@ -1,0 +1,18 @@
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2-main\TP WinForm\Dominio\bin\Debug\Dominio.dll
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2-main\TP WinForm\Dominio\bin\Debug\Dominio.pdb
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2-main\TP WinForm\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2-main\TP WinForm\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2-main\TP WinForm\Dominio\obj\Debug\Dominio.dll
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2-main\TP WinForm\Dominio\obj\Debug\Dominio.pdb
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad II\Actividad-2-main\TP WinForm\Dominio\bin\Debug\Dominio.dll
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad II\Actividad-2-main\TP WinForm\Dominio\bin\Debug\Dominio.pdb
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad II\Actividad-2-main\TP WinForm\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad II\Actividad-2-main\TP WinForm\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad II\Actividad-2-main\TP WinForm\Dominio\obj\Debug\Dominio.dll
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad II\Actividad-2-main\TP WinForm\Dominio\obj\Debug\Dominio.pdb
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2\TP WinForm\Dominio\bin\Debug\Dominio.dll
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2\TP WinForm\Dominio\bin\Debug\Dominio.pdb
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2\TP WinForm\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2\TP WinForm\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2\TP WinForm\Dominio\obj\Debug\Dominio.dll
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2\TP WinForm\Dominio\obj\Debug\Dominio.pdb

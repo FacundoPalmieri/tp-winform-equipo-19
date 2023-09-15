@@ -1,0 +1,27 @@
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2-main\TP WinForm\Negocio\bin\Debug\Negocio.dll
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2-main\TP WinForm\Negocio\bin\Debug\Negocio.pdb
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2-main\TP WinForm\Negocio\bin\Debug\Dominio.dll
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2-main\TP WinForm\Negocio\bin\Debug\Dominio.pdb
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2-main\TP WinForm\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2-main\TP WinForm\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2-main\TP WinForm\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2-main\TP WinForm\Negocio\obj\Debug\Negocio.dll
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2-main\TP WinForm\Negocio\obj\Debug\Negocio.pdb
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad II\Actividad-2-main\TP WinForm\Negocio\bin\Debug\Negocio.dll
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad II\Actividad-2-main\TP WinForm\Negocio\bin\Debug\Negocio.pdb
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad II\Actividad-2-main\TP WinForm\Negocio\bin\Debug\Dominio.dll
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad II\Actividad-2-main\TP WinForm\Negocio\bin\Debug\Dominio.pdb
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad II\Actividad-2-main\TP WinForm\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad II\Actividad-2-main\TP WinForm\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad II\Actividad-2-main\TP WinForm\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad II\Actividad-2-main\TP WinForm\Negocio\obj\Debug\Negocio.dll
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad II\Actividad-2-main\TP WinForm\Negocio\obj\Debug\Negocio.pdb
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2\TP WinForm\Negocio\bin\Debug\Negocio.dll
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2\TP WinForm\Negocio\bin\Debug\Negocio.pdb
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2\TP WinForm\Negocio\bin\Debug\Dominio.dll
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2\TP WinForm\Negocio\bin\Debug\Dominio.pdb
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2\TP WinForm\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2\TP WinForm\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2\TP WinForm\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2\TP WinForm\Negocio\obj\Debug\Negocio.dll
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2\TP WinForm\Negocio\obj\Debug\Negocio.pdb

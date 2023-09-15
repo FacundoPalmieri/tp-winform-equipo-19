@@ -23,7 +23,14 @@ namespace Winform_App
         private void Menu_Load(object sender, EventArgs e)
         {
             Cargar();
-            
+
+            comboBox_filtro_campo.Items.Add("Código Artículo");
+            comboBox_filtro_campo.Items.Add("Nombre");
+            comboBox_filtro_campo.Items.Add("Descripción");
+            comboBox_filtro_campo.Items.Add("Marca");
+            comboBox_filtro_campo.Items.Add("Categoría");
+            comboBox_filtro_campo.Items.Add("Precio");
+
         }
 
         private void dgv_Articulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -39,8 +46,7 @@ namespace Winform_App
             {
                ListaArticulo = Negocio.Listar();
                dgv_Articulos.DataSource = ListaArticulo;
-               //dgv_Articulos.Columns["Id"].Visible = false; *Ver porqué no funciona
-               dgv_Articulos.Columns["Imagen"].Visible = false;
+               ocultarColumnas();
                CargarImagen(ListaArticulo[0].imagen.ImagenUrl);
 
             }
@@ -50,11 +56,23 @@ namespace Winform_App
             }
         }
 
+        private void ocultarColumnas()
+        {
+            if (dgv_Articulos.CurrentRow != null) //se verifica porque entra en conflicto con SelectionChanged
+            {
+                dgv_Articulos.Columns["Id"].Visible = false;
+                dgv_Articulos.Columns["Imagen"].Visible = false;
+
+            }
+        }
+
         private void dgv_Articulos_SelectionChanged(object sender, EventArgs e)
         {
-            
-          Articulo Seleccionado = (Articulo) dgv_Articulos.CurrentRow.DataBoundItem;
-          CargarImagen(Seleccionado.imagen.ImagenUrl);
+          if (dgv_Articulos.CurrentRow != null) 
+           {
+                Articulo Seleccionado = (Articulo)dgv_Articulos.CurrentRow.DataBoundItem;
+                CargarImagen(Seleccionado.imagen.ImagenUrl);
+           }
         }
 
         private void CargarImagen(string Imagen)
@@ -115,6 +133,121 @@ namespace Winform_App
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_filtro_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            try
+            {
+                string campo = comboBox_filtro_campo.SelectedItem.ToString();
+                string criterio = comboBox_filtro_criterio.SelectedItem.ToString();
+                string filtro = textBox_filtro_avanzado.Text;
+                dgv_Articulos.DataSource = negocio.filtrar(campo, criterio, filtro);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            
+        }
+
+        private void textBox_filtro_rapido_KeyPress(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_filtro_rapido_TextChanged(object sender, EventArgs e) //permite filtras automáticamente, sin necesidad de botón buscar
+        {
+            List<Articulo> listaFiltrada;
+            string filtro = textBox_filtro_rapido.Text; //articulo a buscar
+
+            if (filtro.Length >= 3) //filtra a partir de 3 caracteres
+            {                                        //x => es un for (foreach), contains es para buscar el artículo que contenga algo de lo que paso por filtro
+                listaFiltrada = ListaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.CodigoArticulo.ToUpper().Contains(filtro.ToUpper()) || x.Descripcion.ToUpper().Contains(filtro.ToUpper()) || x.marca.Descripcion.ToUpper().Contains(filtro.ToUpper()) || x.categoria.Descripcion.ToUpper().Contains(filtro.ToUpper())); //ToUpper convierte todo en mayúscula, para que filtre indistintamente por minúscula y mayúscula
+            }
+            else
+            {
+                listaFiltrada = ListaArticulo;
+            }
+
+            dgv_Articulos.DataSource = null; //primero lo limpiamos
+            dgv_Articulos.DataSource = listaFiltrada; //le sobreescribimos la lista pero filtrada
+            ocultarColumnas();
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_filtro_campo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = comboBox_filtro_campo.SelectedItem.ToString();
+
+            switch (opcion)
+            {
+                case "Código Artículo":
+
+                    comboBox_filtro_criterio.Items.Clear();
+                    comboBox_filtro_criterio.Items.Add("Comienza con ");
+                    comboBox_filtro_criterio.Items.Add("Termina con ");
+                    comboBox_filtro_criterio.Items.Add("Contiene ");
+
+                    break;
+                
+                case "Nombre":
+
+                    comboBox_filtro_criterio.Items.Clear();
+                    comboBox_filtro_criterio.Items.Add("Comienza con ");
+                    comboBox_filtro_criterio.Items.Add("Termina con ");
+                    comboBox_filtro_criterio.Items.Add("Contiene ");
+
+                    break;
+
+                case "Descripción":
+
+                    comboBox_filtro_criterio.Items.Clear();
+                    comboBox_filtro_criterio.Items.Add("Comienza con ");
+                    comboBox_filtro_criterio.Items.Add("Termina con ");
+                    comboBox_filtro_criterio.Items.Add("Contiene ");
+
+                    break;
+
+                case "Marca":
+
+
+
+                    break;
+
+                case "Categoría":
+
+
+                    break;
+
+                case "Precio":
+
+                    comboBox_filtro_criterio.Items.Clear();
+                    comboBox_filtro_criterio.Items.Add("Comienza con ");
+                    comboBox_filtro_criterio.Items.Add("Termina con ");
+                    comboBox_filtro_criterio.Items.Add("Contiene");
+
+                    break;
             }
         }
     }
