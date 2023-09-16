@@ -44,6 +44,8 @@
             this.textBox_Categoria_detalle = new System.Windows.Forms.TextBox();
             this.label_Imagen_detalle = new System.Windows.Forms.Label();
             this.textBox_URLimagen_detalle = new System.Windows.Forms.TextBox();
+            this.button_SiguienteFoto = new System.Windows.Forms.Button();
+            this.button_AnteriorFoto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Imagen_detalle)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,11 +180,32 @@
             this.textBox_URLimagen_detalle.Size = new System.Drawing.Size(121, 20);
             this.textBox_URLimagen_detalle.TabIndex = 32;
             // 
+            // button_SiguienteFoto
+            // 
+            this.button_SiguienteFoto.Location = new System.Drawing.Point(506, 133);
+            this.button_SiguienteFoto.Name = "button_SiguienteFoto";
+            this.button_SiguienteFoto.Size = new System.Drawing.Size(30, 20);
+            this.button_SiguienteFoto.TabIndex = 36;
+            this.button_SiguienteFoto.Text = "->";
+            this.button_SiguienteFoto.UseVisualStyleBackColor = true;
+            this.button_SiguienteFoto.Click += new System.EventHandler(this.button_SiguienteFoto_Click);
+            // 
+            // button_AnteriorFoto
+            // 
+            this.button_AnteriorFoto.Location = new System.Drawing.Point(259, 132);
+            this.button_AnteriorFoto.Name = "button_AnteriorFoto";
+            this.button_AnteriorFoto.Size = new System.Drawing.Size(30, 20);
+            this.button_AnteriorFoto.TabIndex = 37;
+            this.button_AnteriorFoto.Text = "<-";
+            this.button_AnteriorFoto.UseVisualStyleBackColor = true;
+            // 
             // DetalleArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 314);
+            this.Controls.Add(this.button_AnteriorFoto);
+            this.Controls.Add(this.button_SiguienteFoto);
             this.Controls.Add(this.textBox_Categoria_detalle);
             this.Controls.Add(this.textBox_Marca_detalle);
             this.Controls.Add(this.pictureBox_Imagen_detalle);
@@ -227,5 +250,7 @@
         private System.Windows.Forms.TextBox textBox_Categoria_detalle;
         private System.Windows.Forms.Label label_Imagen_detalle;
         private System.Windows.Forms.TextBox textBox_URLimagen_detalle;
+        private System.Windows.Forms.Button button_SiguienteFoto;
+        private System.Windows.Forms.Button button_AnteriorFoto;
     }
 }

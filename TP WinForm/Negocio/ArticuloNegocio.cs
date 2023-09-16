@@ -60,9 +60,9 @@ namespace Negocio
                         Aux.imagen.IdCodigoArticulo = Aux.Id;
                         
                     }
-                    
-                    
-                    Lista.Add(Aux);   
+                        
+                        
+                        Lista.Add(Aux);   
                 }
                 return Lista;
             }

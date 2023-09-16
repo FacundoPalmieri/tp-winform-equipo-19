@@ -12,18 +12,18 @@ namespace Negocio
         public List<Imagen> listar()
         {
             List<Imagen> lista = new List<Imagen>();
-            AccesoDatos datos = new AccesoDatos();
+            AccesoDatos Datos = new AccesoDatos();
 
             try
             {
-                datos.SetearConsulta("Select IdArticulo, ImagenUrl From Imagenes");
-                datos.EjecutarConsulta();
+                Datos.SetearConsulta("Select IdArticulo, ImagenUrl From Imagenes");
+                Datos.EjecutarConsulta();
 
-                while (datos.lector.Read())
+                while (Datos.lector.Read())
                 {
                     Imagen aux = new Imagen();
-                    aux.IdCodigoArticulo = (int)datos.lector["IdArticulo"];
-                    aux.ImagenUrl = (string)datos.lector["ImagenUrl"];
+                    aux.IdCodigoArticulo = (int)Datos.lector["IdArticulo"];
+                    aux.ImagenUrl = (string)Datos.lector["ImagenUrl"];
 
                     lista.Add(aux);
                 }
@@ -36,7 +36,7 @@ namespace Negocio
             }
             finally
             {
-                datos.CerrarConexion();
+                Datos.CerrarConexion();
             }
 
 
@@ -85,6 +85,54 @@ namespace Negocio
             {
 
                 throw ex;
+            }
+            finally
+            {
+                Datos.CerrarConexion();
+
+            }
+        }
+
+
+        //Metodo a desarrollar
+        public Articulo ProximaImagen(Articulo articulo)
+        {
+            AccesoDatos Datos = new AccesoDatos();
+
+            try
+            {
+
+                Articulo aux1 = new Articulo();
+                Datos.SetearConsulta("SELECT a.Codigo, i.ImagenUrl  From ARTICULOS a inner join IMAGENES i on a.Id = i.IdArticulo order by a.Codigo");
+                Datos.EjecutarConsulta();
+                while (Datos.lector.Read())
+                {
+                    aux1.CodigoArticulo = (string)Datos.lector["Codigo"];
+
+                    if (aux1.CodigoArticulo == articulo.CodigoArticulo )
+                    {
+                        Articulo aux = new Articulo();
+                        aux.CodigoArticulo = articulo.CodigoArticulo;
+                        aux.imagen = new Imagen();
+                        aux.imagen.ImagenUrl = (string)Datos.lector["ImagenUrl"];
+                        return aux;
+
+                        
+                    }
+
+                }
+                throw new Exception("No se encontró ninguna imagen para el artículo especificado");
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+                
             }
             finally
             {

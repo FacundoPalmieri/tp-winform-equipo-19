@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -58,6 +59,21 @@ namespace Winform_App
         private void button_volver_Click(object sender, EventArgs e)
         {
             Close();
+        }
+       
+        // Código a desarrollar.
+        private void button_SiguienteFoto_Click(object sender, EventArgs e)
+        {
+            Articulo aux = new Articulo();  
+            ImagenNegocio imagen = new ImagenNegocio();
+            Articulo articulo = new Articulo();
+            articulo.CodigoArticulo = textBox_Codigo_detalle.Text;
+            aux= imagen.ProximaImagen(articulo);
+            CargarImagen(aux.imagen.ImagenUrl);
+
+
+            
+
         }
     }
 }
