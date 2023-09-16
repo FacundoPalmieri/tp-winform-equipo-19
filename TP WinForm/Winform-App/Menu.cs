@@ -315,5 +315,14 @@ namespace Winform_App
         {
 
         }
+
+        private void button_ver_detalle_Click(object sender, EventArgs e)
+        {
+            Articulo Seleccionado;
+            Seleccionado = (Articulo)dgv_Articulos.CurrentRow.DataBoundItem;
+            DetalleArticulo detalle = new DetalleArticulo(Seleccionado);
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            detalle.ShowDialog();
+        }
     }
 }

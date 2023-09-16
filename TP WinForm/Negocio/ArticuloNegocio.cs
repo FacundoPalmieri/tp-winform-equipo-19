@@ -145,6 +145,47 @@ namespace Negocio
             }
         }
 
+        public void Mostrar (Articulo articulo)
+        {
+            AccesoDatos Datos = new AccesoDatos();
+
+            try
+            {
+                Datos.SetearConsulta("update ARTICULOS set Codigo = @CodigoArticulo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, Precio = @Precio where Id = @Id");
+                Datos.SetearParametro("@CodigoArticulo", articulo.CodigoArticulo);
+                Datos.SetearParametro("@Nombre", articulo.Nombre);
+                Datos.SetearParametro("@Descripcion", articulo.Descripcion);
+                Datos.SetearParametro("@IdMarca", articulo.marca.Id);
+
+                if (articulo.categoria != null)
+                {
+                    Datos.SetearParametro("@IdCategoria", articulo.categoria.Id);
+                }
+
+                else
+                {
+                    Datos.SetearParametro("@IdCategoria", DBNull.Value);
+                }
+
+
+                Datos.SetearParametro("@Precio", articulo.Precio);
+                Datos.SetearParametro("@Id", articulo.Id);
+
+                Datos.EjectuarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Datos.CerrarConexion();
+
+            }
+
+        }
+
         public int BuscarId(Articulo articulo)
         {
             AccesoDatos datos = new AccesoDatos();

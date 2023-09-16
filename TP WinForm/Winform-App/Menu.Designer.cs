@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_Articulos = new System.Windows.Forms.DataGridView();
             this.pb_Articulos = new System.Windows.Forms.PictureBox();
             this.button_Agregar = new System.Windows.Forms.Button();
@@ -45,6 +45,7 @@
             this.comboBox_filtro_campo = new System.Windows.Forms.ComboBox();
             this.textBox_filtro_avanzado = new System.Windows.Forms.TextBox();
             this.label_filtro_avanzado = new System.Windows.Forms.Label();
+            this.button_ver_detalle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Articulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Articulos)).BeginInit();
             this.SuspendLayout();
@@ -52,14 +53,14 @@
             // dgv_Articulos
             // 
             this.dgv_Articulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Articulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Articulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Articulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Articulos.GridColor = System.Drawing.Color.Black;
@@ -86,7 +87,7 @@
             // button_Agregar
             // 
             this.button_Agregar.ForeColor = System.Drawing.Color.Black;
-            this.button_Agregar.Location = new System.Drawing.Point(21, 307);
+            this.button_Agregar.Location = new System.Drawing.Point(21, 319);
             this.button_Agregar.Name = "button_Agregar";
             this.button_Agregar.Size = new System.Drawing.Size(75, 23);
             this.button_Agregar.TabIndex = 2;
@@ -96,7 +97,7 @@
             // 
             // button_modificar
             // 
-            this.button_modificar.Location = new System.Drawing.Point(101, 307);
+            this.button_modificar.Location = new System.Drawing.Point(101, 319);
             this.button_modificar.Name = "button_modificar";
             this.button_modificar.Size = new System.Drawing.Size(75, 23);
             this.button_modificar.TabIndex = 3;
@@ -116,7 +117,7 @@
             // 
             // button1_eliminarFisico
             // 
-            this.button1_eliminarFisico.Location = new System.Drawing.Point(182, 307);
+            this.button1_eliminarFisico.Location = new System.Drawing.Point(182, 319);
             this.button1_eliminarFisico.Name = "button1_eliminarFisico";
             this.button1_eliminarFisico.Size = new System.Drawing.Size(119, 23);
             this.button1_eliminarFisico.TabIndex = 5;
@@ -126,7 +127,7 @@
             // 
             // button1_eliminarLogico
             // 
-            this.button1_eliminarLogico.Location = new System.Drawing.Point(307, 307);
+            this.button1_eliminarLogico.Location = new System.Drawing.Point(307, 319);
             this.button1_eliminarLogico.Name = "button1_eliminarLogico";
             this.button1_eliminarLogico.Size = new System.Drawing.Size(119, 23);
             this.button1_eliminarLogico.TabIndex = 6;
@@ -154,7 +155,7 @@
             // 
             // button_filtro
             // 
-            this.button_filtro.Location = new System.Drawing.Point(632, 349);
+            this.button_filtro.Location = new System.Drawing.Point(632, 361);
             this.button_filtro.Name = "button_filtro";
             this.button_filtro.Size = new System.Drawing.Size(75, 23);
             this.button_filtro.TabIndex = 9;
@@ -165,7 +166,7 @@
             // label_filtro_campo
             // 
             this.label_filtro_campo.AutoSize = true;
-            this.label_filtro_campo.Location = new System.Drawing.Point(18, 354);
+            this.label_filtro_campo.Location = new System.Drawing.Point(18, 366);
             this.label_filtro_campo.Name = "label_filtro_campo";
             this.label_filtro_campo.Size = new System.Drawing.Size(40, 13);
             this.label_filtro_campo.TabIndex = 10;
@@ -175,7 +176,7 @@
             // 
             this.comboBox_filtro_criterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_filtro_criterio.FormattingEnabled = true;
-            this.comboBox_filtro_criterio.Location = new System.Drawing.Point(284, 351);
+            this.comboBox_filtro_criterio.Location = new System.Drawing.Point(284, 363);
             this.comboBox_filtro_criterio.Name = "comboBox_filtro_criterio";
             this.comboBox_filtro_criterio.Size = new System.Drawing.Size(121, 21);
             this.comboBox_filtro_criterio.TabIndex = 11;
@@ -183,7 +184,7 @@
             // label_filtro_criterio
             // 
             this.label_filtro_criterio.AutoSize = true;
-            this.label_filtro_criterio.Location = new System.Drawing.Point(212, 354);
+            this.label_filtro_criterio.Location = new System.Drawing.Point(212, 366);
             this.label_filtro_criterio.Name = "label_filtro_criterio";
             this.label_filtro_criterio.Size = new System.Drawing.Size(39, 13);
             this.label_filtro_criterio.TabIndex = 12;
@@ -194,7 +195,7 @@
             // 
             this.comboBox_filtro_campo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_filtro_campo.FormattingEnabled = true;
-            this.comboBox_filtro_campo.Location = new System.Drawing.Point(73, 351);
+            this.comboBox_filtro_campo.Location = new System.Drawing.Point(73, 363);
             this.comboBox_filtro_campo.Name = "comboBox_filtro_campo";
             this.comboBox_filtro_campo.Size = new System.Drawing.Size(121, 21);
             this.comboBox_filtro_campo.TabIndex = 13;
@@ -202,7 +203,7 @@
             // 
             // textBox_filtro_avanzado
             // 
-            this.textBox_filtro_avanzado.Location = new System.Drawing.Point(504, 349);
+            this.textBox_filtro_avanzado.Location = new System.Drawing.Point(504, 361);
             this.textBox_filtro_avanzado.Name = "textBox_filtro_avanzado";
             this.textBox_filtro_avanzado.Size = new System.Drawing.Size(100, 20);
             this.textBox_filtro_avanzado.TabIndex = 14;
@@ -211,12 +212,22 @@
             // label_filtro_avanzado
             // 
             this.label_filtro_avanzado.AutoSize = true;
-            this.label_filtro_avanzado.Location = new System.Drawing.Point(435, 354);
+            this.label_filtro_avanzado.Location = new System.Drawing.Point(435, 366);
             this.label_filtro_avanzado.Name = "label_filtro_avanzado";
             this.label_filtro_avanzado.Size = new System.Drawing.Size(29, 13);
             this.label_filtro_avanzado.TabIndex = 15;
             this.label_filtro_avanzado.Text = "Filtro";
             this.label_filtro_avanzado.Click += new System.EventHandler(this.label1_Click_2);
+            // 
+            // button_ver_detalle
+            // 
+            this.button_ver_detalle.Location = new System.Drawing.Point(682, 293);
+            this.button_ver_detalle.Name = "button_ver_detalle";
+            this.button_ver_detalle.Size = new System.Drawing.Size(240, 25);
+            this.button_ver_detalle.TabIndex = 16;
+            this.button_ver_detalle.Text = "Ver detalle";
+            this.button_ver_detalle.UseVisualStyleBackColor = true;
+            this.button_ver_detalle.Click += new System.EventHandler(this.button_ver_detalle_Click);
             // 
             // Menu
             // 
@@ -224,6 +235,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(934, 461);
+            this.Controls.Add(this.button_ver_detalle);
             this.Controls.Add(this.label_filtro_avanzado);
             this.Controls.Add(this.textBox_filtro_avanzado);
             this.Controls.Add(this.comboBox_filtro_campo);
@@ -272,5 +284,6 @@
         private System.Windows.Forms.ComboBox comboBox_filtro_campo;
         private System.Windows.Forms.TextBox textBox_filtro_avanzado;
         private System.Windows.Forms.Label label_filtro_avanzado;
+        private System.Windows.Forms.Button button_ver_detalle;
     }
 }

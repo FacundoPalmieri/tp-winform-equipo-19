@@ -70,3 +70,4 @@ C:\Users\krivera\Desktop\Actividad-2-back up\TP WinForm\Winform-App\obj\Debug\Wi
 C:\Users\krivera\Desktop\Actividad-2-back up\TP WinForm\Winform-App\obj\Debug\Winform-App.csproj.CopyComplete
 C:\Users\krivera\Desktop\Actividad-2-back up\TP WinForm\Winform-App\obj\Debug\Winform-App.exe
 C:\Users\krivera\Desktop\Actividad-2-back up\TP WinForm\Winform-App\obj\Debug\Winform-App.pdb
+C:\Users\krivera\Desktop\UTN\PROGRAMACION III\Actividad-2\TP WinForm\Winform-App\obj\Debug\Winform_App.DetalleArticulo.resources
