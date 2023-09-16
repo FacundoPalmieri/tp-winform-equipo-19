@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.button_Comenzar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -68,46 +67,6 @@
             this.Load += new System.EventHandler(this.Bienvenido_Load);
             this.ResumeLayout(false);
 
-=======
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
-            this.button_Comenzar = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // button_Comenzar
-            // 
-            this.button_Comenzar.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button_Comenzar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Comenzar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button_Comenzar.Location = new System.Drawing.Point(297, 379);
-            this.button_Comenzar.Name = "button_Comenzar";
-            this.button_Comenzar.Size = new System.Drawing.Size(341, 70);
-            this.button_Comenzar.TabIndex = 1;
-            this.button_Comenzar.Text = "Comenzar  =)";
-            this.button_Comenzar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button_Comenzar.UseVisualStyleBackColor = false;
-            this.button_Comenzar.Click += new System.EventHandler(this.button_Comenzar_Click);
-            // 
-            // Inicio
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(934, 461);
-            this.Controls.Add(this.button_Comenzar);
-            this.DoubleBuffered = true;
-            this.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.IsMdiContainer = true;
-            this.MaximumSize = new System.Drawing.Size(950, 500);
-            this.MinimumSize = new System.Drawing.Size(950, 500);
-            this.Name = "Inicio";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Inicio";
-            this.Load += new System.EventHandler(this.Bienvenido_Load);
-            this.ResumeLayout(false);
-
->>>>>>> 8b47854438650f06fcb9d761e983e0e72f348f9e
         }
 
         #endregion
