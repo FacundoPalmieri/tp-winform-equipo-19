@@ -34,9 +34,10 @@
             // 
             // button_Comenzar
             // 
-            this.button_Comenzar.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button_Comenzar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Comenzar.ForeColor = System.Drawing.Color.SteelBlue;
+            this.button_Comenzar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_Comenzar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_Comenzar.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Comenzar.ForeColor = System.Drawing.Color.Black;
             this.button_Comenzar.Location = new System.Drawing.Point(297, 379);
             this.button_Comenzar.Name = "button_Comenzar";
             this.button_Comenzar.Size = new System.Drawing.Size(341, 70);
