@@ -38,7 +38,7 @@
             this.button_Comenzar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_Comenzar.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Comenzar.ForeColor = System.Drawing.Color.Black;
-            this.button_Comenzar.Location = new System.Drawing.Point(274, 355);
+            this.button_Comenzar.Location = new System.Drawing.Point(287, 354);
             this.button_Comenzar.MaximumSize = new System.Drawing.Size(341, 70);
             this.button_Comenzar.MinimumSize = new System.Drawing.Size(341, 70);
             this.button_Comenzar.Name = "button_Comenzar";

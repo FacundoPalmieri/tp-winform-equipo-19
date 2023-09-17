@@ -22,7 +22,7 @@ namespace Negocio
             try
             {
 
-                datos.SetearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Id As IdMarca, M.Descripcion As Marca, I.IdArticulo as IdImagen, I.ImagenUrl, A.Precio, C.Id As IdCategoria, C.Descripcion As Categoria from ARTICULOS A left join MARCAS M on A.IdMarca = M.Id left join CATEGORIAS C on A.IdCategoria = C.Id  left join IMAGENES I on I.IdArticulo = A.Id");
+                datos.SetearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Id As IdMarca, M.Descripcion As Marca, I.IdArticulo as IdImagen, I.ImagenUrl, A.Precio, C.Id As IdCategoria, C.Descripcion As Categoria from ARTICULOS A left join MARCAS M on A.IdMarca = M.Id left join CATEGORIAS C on A.IdCategoria = C.Id  left join IMAGENES I on I.IdArticulo = A.Id order by  A.Nombre ");
                 datos.EjecutarConsulta();
 
                 while (datos.lector.Read())
@@ -60,10 +60,28 @@ namespace Negocio
                         Aux.imagen.IdCodigoArticulo = Aux.Id;
                         
                     }
-                        
-                        
-                        Lista.Add(Aux);   
+
+                    bool EstaEnLista = new bool();
+                    EstaEnLista = false;
+                    foreach (Articulo item in Lista)
+                    {
+                        if (Aux.CodigoArticulo == item.CodigoArticulo)
+                        {
+                            EstaEnLista = true;
+                            break; 
+                        }
+                    }
+
+                    if (!EstaEnLista)
+                    {
+                        Lista.Add(Aux);
+                    }
+
+
+
+
                 }
+                  
                 return Lista;
             }
             catch (Exception ex)
@@ -172,6 +190,7 @@ namespace Negocio
                 Datos.SetearParametro("@Id", articulo.Id);
 
                 Datos.EjectuarAccion();
+
             }
             catch (Exception ex)
             {

@@ -94,8 +94,8 @@ namespace Negocio
         }
 
 
-        //Metodo a desarrollar
-        public Articulo ProximaImagen(Articulo articulo)
+
+        public List<Articulo> ProximaImagen(Articulo articulo)
         {
             AccesoDatos Datos = new AccesoDatos();
 
@@ -103,6 +103,7 @@ namespace Negocio
             {
 
                 Articulo aux1 = new Articulo();
+                List <Articulo> articulosAux = new List<Articulo>();    
                 Datos.SetearConsulta("SELECT a.Codigo, i.ImagenUrl  From ARTICULOS a inner join IMAGENES i on a.Id = i.IdArticulo order by a.Codigo");
                 Datos.EjecutarConsulta();
                 while (Datos.lector.Read())
@@ -115,12 +116,13 @@ namespace Negocio
                         aux.CodigoArticulo = articulo.CodigoArticulo;
                         aux.imagen = new Imagen();
                         aux.imagen.ImagenUrl = (string)Datos.lector["ImagenUrl"];
-                        return aux;
+                        articulosAux.Add(aux);
 
                         
                     }
 
                 }
+                return articulosAux;
                 throw new Exception("No se encontró ninguna imagen para el artículo especificado");
 
 

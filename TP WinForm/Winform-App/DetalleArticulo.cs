@@ -1,10 +1,12 @@
 ﻿using Dominio;
 using Negocio;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -47,6 +49,7 @@ namespace Winform_App
             try
             {
                 pictureBox_Imagen_detalle.Load(Imagen);
+                
 
             }
             catch (Exception ex)
@@ -60,20 +63,96 @@ namespace Winform_App
         {
             Close();
         }
-       
+
+        int AuxContador = 0;
+
         // Código a desarrollar.
         private void button_SiguienteFoto_Click(object sender, EventArgs e)
         {
-            Articulo aux = new Articulo();  
-            ImagenNegocio imagen = new ImagenNegocio();
+            ImagenNegocio imagenNegocio = new ImagenNegocio();
             Articulo articulo = new Articulo();
             articulo.CodigoArticulo = textBox_Codigo_detalle.Text;
-            aux= imagen.ProximaImagen(articulo);
-            CargarImagen(aux.imagen.ImagenUrl);
+
+            try
+            {
+                List<Articulo> articulosAux = imagenNegocio.ProximaImagen(articulo);
+                int Contador = 0;
+
+                if (articulosAux.Count > 0)
+                {
+                    foreach (Articulo item in articulosAux)
+                    {
+
+                        pictureBox_Imagen_detalle.ImageLocation = articulosAux[Contador].imagen.ImagenUrl;
+                        Contador++;
+                    }
+                    AuxContador = Contador-1;
+                  
+                   
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró ninguna imagen para el artículo especificado.");
+                 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+             
+            }
+        }
 
 
-            
+
+
+
+        private void pictureBox_Imagen_detalle_Click(object sender, EventArgs e)
+        {
 
         }
+
+
+
+        //
+        private void button_AnteriorFoto_Click(object sender, EventArgs e)
+        {
+
+            ImagenNegocio imagenNegocio = new ImagenNegocio();
+            Articulo articulo = new Articulo();
+            articulo.CodigoArticulo = textBox_Codigo_detalle.Text;
+          
+          
+
+            try
+            {
+                List<Articulo> articulosAux = imagenNegocio.ProximaImagen(articulo);
+                
+
+                if (articulosAux.Count > 0)
+                {
+                    foreach (Articulo item in articulosAux)
+                    {
+
+                        pictureBox_Imagen_detalle.ImageLocation = articulosAux[AuxContador-1].imagen.ImagenUrl;
+                       
+
+                    }
+                   
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró ninguna imagen para el artículo especificado.");
+                  
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                
+            }
+        }
+
     }
 }
+

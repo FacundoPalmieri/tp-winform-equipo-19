@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_Articulos = new System.Windows.Forms.DataGridView();
             this.pb_Articulos = new System.Windows.Forms.PictureBox();
             this.button_Agregar = new System.Windows.Forms.Button();
@@ -52,34 +52,35 @@
             // 
             // dgv_Articulos
             // 
+            this.dgv_Articulos.AllowUserToOrderColumns = true;
             this.dgv_Articulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Articulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Articulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Articulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Articulos.GridColor = System.Drawing.Color.Black;
             this.dgv_Articulos.Location = new System.Drawing.Point(6, 49);
             this.dgv_Articulos.MultiSelect = false;
             this.dgv_Articulos.Name = "dgv_Articulos";
+            this.dgv_Articulos.RowHeadersVisible = false;
             this.dgv_Articulos.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_Articulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Articulos.ShowRowErrors = false;
-            this.dgv_Articulos.Size = new System.Drawing.Size(670, 227);
-            this.dgv_Articulos.TabIndex = 0;
-            this.dgv_Articulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Articulos_CellContentClick_1);
+            this.dgv_Articulos.Size = new System.Drawing.Size(623, 225);
+            this.dgv_Articulos.TabIndex = 11;
             this.dgv_Articulos.SelectionChanged += new System.EventHandler(this.dgv_Articulos_SelectionChanged);
             // 
             // pb_Articulos
             // 
             this.pb_Articulos.Location = new System.Drawing.Point(682, 49);
             this.pb_Articulos.Name = "pb_Articulos";
-            this.pb_Articulos.Size = new System.Drawing.Size(240, 227);
+            this.pb_Articulos.Size = new System.Drawing.Size(240, 225);
             this.pb_Articulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Articulos.TabIndex = 1;
             this.pb_Articulos.TabStop = false;
@@ -90,53 +91,58 @@
             this.button_Agregar.Location = new System.Drawing.Point(21, 319);
             this.button_Agregar.Name = "button_Agregar";
             this.button_Agregar.Size = new System.Drawing.Size(75, 23);
-            this.button_Agregar.TabIndex = 2;
+            this.button_Agregar.TabIndex = 1;
             this.button_Agregar.Text = "Agregar";
             this.button_Agregar.UseVisualStyleBackColor = false;
             this.button_Agregar.Click += new System.EventHandler(this.button_Agregar_Click);
             // 
             // button_modificar
             // 
+            this.button_modificar.ForeColor = System.Drawing.Color.Black;
             this.button_modificar.Location = new System.Drawing.Point(101, 319);
             this.button_modificar.Name = "button_modificar";
             this.button_modificar.Size = new System.Drawing.Size(75, 23);
-            this.button_modificar.TabIndex = 3;
+            this.button_modificar.TabIndex = 2;
             this.button_modificar.Text = "Modificar";
             this.button_modificar.UseVisualStyleBackColor = false;
             this.button_modificar.Click += new System.EventHandler(this.button_modificar_Click);
             // 
             // button_cerrar
             // 
+            this.button_cerrar.ForeColor = System.Drawing.Color.Black;
             this.button_cerrar.Location = new System.Drawing.Point(847, 16);
             this.button_cerrar.Name = "button_cerrar";
             this.button_cerrar.Size = new System.Drawing.Size(75, 23);
-            this.button_cerrar.TabIndex = 4;
+            this.button_cerrar.TabIndex = 10;
             this.button_cerrar.Text = "Cerrar";
             this.button_cerrar.UseVisualStyleBackColor = true;
             this.button_cerrar.Click += new System.EventHandler(this.button_cerrar_Click);
             // 
             // button1_eliminarFisico
             // 
+            this.button1_eliminarFisico.ForeColor = System.Drawing.Color.Black;
             this.button1_eliminarFisico.Location = new System.Drawing.Point(182, 319);
             this.button1_eliminarFisico.Name = "button1_eliminarFisico";
             this.button1_eliminarFisico.Size = new System.Drawing.Size(119, 23);
-            this.button1_eliminarFisico.TabIndex = 5;
+            this.button1_eliminarFisico.TabIndex = 3;
             this.button1_eliminarFisico.Text = "Eliminar Físico";
             this.button1_eliminarFisico.UseVisualStyleBackColor = false;
             this.button1_eliminarFisico.Click += new System.EventHandler(this.button1_eliminarFisico_Click);
             // 
             // button1_eliminarLogico
             // 
+            this.button1_eliminarLogico.ForeColor = System.Drawing.Color.Black;
             this.button1_eliminarLogico.Location = new System.Drawing.Point(307, 319);
             this.button1_eliminarLogico.Name = "button1_eliminarLogico";
             this.button1_eliminarLogico.Size = new System.Drawing.Size(119, 23);
-            this.button1_eliminarLogico.TabIndex = 6;
+            this.button1_eliminarLogico.TabIndex = 4;
             this.button1_eliminarLogico.Text = "Eliminar Lógico";
             this.button1_eliminarLogico.UseVisualStyleBackColor = false;
             // 
             // label_filtro_rapido
             // 
             this.label_filtro_rapido.AutoSize = true;
+            this.label_filtro_rapido.ForeColor = System.Drawing.Color.Black;
             this.label_filtro_rapido.Location = new System.Drawing.Point(18, 26);
             this.label_filtro_rapido.Name = "label_filtro_rapido";
             this.label_filtro_rapido.Size = new System.Drawing.Size(29, 13);
@@ -149,16 +155,17 @@
             this.textBox_filtro_rapido.Location = new System.Drawing.Point(53, 23);
             this.textBox_filtro_rapido.Name = "textBox_filtro_rapido";
             this.textBox_filtro_rapido.Size = new System.Drawing.Size(258, 20);
-            this.textBox_filtro_rapido.TabIndex = 8;
+            this.textBox_filtro_rapido.TabIndex = 0;
             this.textBox_filtro_rapido.TextChanged += new System.EventHandler(this.textBox_filtro_rapido_TextChanged);
             this.textBox_filtro_rapido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_filtro_rapido_KeyPress);
             // 
             // button_filtro
             // 
+            this.button_filtro.ForeColor = System.Drawing.Color.Black;
             this.button_filtro.Location = new System.Drawing.Point(632, 361);
             this.button_filtro.Name = "button_filtro";
             this.button_filtro.Size = new System.Drawing.Size(75, 23);
-            this.button_filtro.TabIndex = 9;
+            this.button_filtro.TabIndex = 8;
             this.button_filtro.Text = "Buscar";
             this.button_filtro.UseVisualStyleBackColor = true;
             this.button_filtro.Click += new System.EventHandler(this.button_filtro_Click);
@@ -166,10 +173,11 @@
             // label_filtro_campo
             // 
             this.label_filtro_campo.AutoSize = true;
+            this.label_filtro_campo.ForeColor = System.Drawing.Color.Black;
             this.label_filtro_campo.Location = new System.Drawing.Point(18, 366);
             this.label_filtro_campo.Name = "label_filtro_campo";
             this.label_filtro_campo.Size = new System.Drawing.Size(40, 13);
-            this.label_filtro_campo.TabIndex = 10;
+            this.label_filtro_campo.TabIndex = 5;
             this.label_filtro_campo.Text = "Campo";
             // 
             // comboBox_filtro_criterio
@@ -179,15 +187,16 @@
             this.comboBox_filtro_criterio.Location = new System.Drawing.Point(284, 363);
             this.comboBox_filtro_criterio.Name = "comboBox_filtro_criterio";
             this.comboBox_filtro_criterio.Size = new System.Drawing.Size(121, 21);
-            this.comboBox_filtro_criterio.TabIndex = 11;
+            this.comboBox_filtro_criterio.TabIndex = 6;
             // 
             // label_filtro_criterio
             // 
             this.label_filtro_criterio.AutoSize = true;
+            this.label_filtro_criterio.ForeColor = System.Drawing.Color.Black;
             this.label_filtro_criterio.Location = new System.Drawing.Point(212, 366);
             this.label_filtro_criterio.Name = "label_filtro_criterio";
             this.label_filtro_criterio.Size = new System.Drawing.Size(39, 13);
-            this.label_filtro_criterio.TabIndex = 12;
+            this.label_filtro_criterio.TabIndex = 7;
             this.label_filtro_criterio.Text = "Criterio";
             this.label_filtro_criterio.Click += new System.EventHandler(this.label1_Click_1);
             // 
@@ -198,7 +207,7 @@
             this.comboBox_filtro_campo.Location = new System.Drawing.Point(73, 363);
             this.comboBox_filtro_campo.Name = "comboBox_filtro_campo";
             this.comboBox_filtro_campo.Size = new System.Drawing.Size(121, 21);
-            this.comboBox_filtro_campo.TabIndex = 13;
+            this.comboBox_filtro_campo.TabIndex = 5;
             this.comboBox_filtro_campo.SelectedIndexChanged += new System.EventHandler(this.comboBox_filtro_campo_SelectedIndexChanged);
             // 
             // textBox_filtro_avanzado
@@ -206,25 +215,27 @@
             this.textBox_filtro_avanzado.Location = new System.Drawing.Point(504, 361);
             this.textBox_filtro_avanzado.Name = "textBox_filtro_avanzado";
             this.textBox_filtro_avanzado.Size = new System.Drawing.Size(100, 20);
-            this.textBox_filtro_avanzado.TabIndex = 14;
+            this.textBox_filtro_avanzado.TabIndex = 7;
             this.textBox_filtro_avanzado.TextChanged += new System.EventHandler(this.textBox_filtro_avanzado_TextChanged);
             // 
             // label_filtro_avanzado
             // 
             this.label_filtro_avanzado.AutoSize = true;
+            this.label_filtro_avanzado.ForeColor = System.Drawing.Color.Black;
             this.label_filtro_avanzado.Location = new System.Drawing.Point(435, 366);
             this.label_filtro_avanzado.Name = "label_filtro_avanzado";
             this.label_filtro_avanzado.Size = new System.Drawing.Size(29, 13);
-            this.label_filtro_avanzado.TabIndex = 15;
+            this.label_filtro_avanzado.TabIndex = 9;
             this.label_filtro_avanzado.Text = "Filtro";
             this.label_filtro_avanzado.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // button_ver_detalle
             // 
+            this.button_ver_detalle.ForeColor = System.Drawing.Color.Black;
             this.button_ver_detalle.Location = new System.Drawing.Point(682, 293);
             this.button_ver_detalle.Name = "button_ver_detalle";
             this.button_ver_detalle.Size = new System.Drawing.Size(240, 25);
-            this.button_ver_detalle.TabIndex = 16;
+            this.button_ver_detalle.TabIndex = 9;
             this.button_ver_detalle.Text = "Ver detalle";
             this.button_ver_detalle.UseVisualStyleBackColor = true;
             this.button_ver_detalle.Click += new System.EventHandler(this.button_ver_detalle_Click);

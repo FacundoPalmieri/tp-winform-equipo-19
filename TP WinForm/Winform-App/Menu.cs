@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,7 +23,9 @@ namespace Winform_App
 
         private void Menu_Load(object sender, EventArgs e)
         {
+
             Cargar();
+
 
             comboBox_filtro_campo.Items.Add("Código Artículo");
             comboBox_filtro_campo.Items.Add("Nombre");
@@ -30,12 +33,14 @@ namespace Winform_App
             comboBox_filtro_campo.Items.Add("Marca");
             comboBox_filtro_campo.Items.Add("Categoría");
             comboBox_filtro_campo.Items.Add("Precio");
+           
+
 
         }
 
         private void dgv_Articulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void Cargar()
@@ -44,10 +49,12 @@ namespace Winform_App
 
             try
             {
-               ListaArticulo = Negocio.Listar();
-               dgv_Articulos.DataSource = ListaArticulo;
-               ocultarColumnas();
-               CargarImagen(ListaArticulo[0].imagen.ImagenUrl);
+                ListaArticulo = Negocio.Listar();
+
+                dgv_Articulos.DataSource = ListaArticulo;
+                ocultarColumnas();
+
+                CargarImagen(ListaArticulo[0].imagen.ImagenUrl);
 
             }
             catch (Exception ex)
@@ -63,23 +70,25 @@ namespace Winform_App
                 dgv_Articulos.Columns["Id"].Visible = false;
                 dgv_Articulos.Columns["Imagen"].Visible = false;
 
+
             }
         }
 
         private void dgv_Articulos_SelectionChanged(object sender, EventArgs e)
         {
-          if (dgv_Articulos.CurrentRow != null) 
-           {
+            if (dgv_Articulos.CurrentRow != null)
+            {
                 Articulo Seleccionado = (Articulo)dgv_Articulos.CurrentRow.DataBoundItem;
                 CargarImagen(Seleccionado.imagen.ImagenUrl);
-           }
+
+            }
         }
 
         private void CargarImagen(string Imagen)
         {
             try
             {
-               pb_Articulos.Load(Imagen);
+                pb_Articulos.Load(Imagen);
 
             }
             catch (Exception ex)
@@ -111,10 +120,7 @@ namespace Winform_App
             Close();
         }
 
-        private void dgv_Articulos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
         private void button1_eliminarFisico_Click(object sender, EventArgs e)
         {
@@ -122,7 +128,7 @@ namespace Winform_App
             Articulo seleccionado;
             try
             {
-                DialogResult respuesta = MessageBox.Show("¿Está seguro de eliminarlo?","Eliminando",MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult respuesta = MessageBox.Show("¿Está seguro de eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (respuesta == DialogResult.Yes)
                 {
                     seleccionado = (Articulo)dgv_Articulos.CurrentRow.DataBoundItem;
@@ -143,7 +149,7 @@ namespace Winform_App
 
         private bool validarFiltro()
         {
-            if (comboBox_filtro_campo.SelectedIndex < 0) 
+            if (comboBox_filtro_campo.SelectedIndex < 0)
             {
                 MessageBox.Show("Seleccione un campo a Filtrar");
                 return true;
@@ -175,13 +181,13 @@ namespace Winform_App
                 }
             }
 
-            
+
             return false;
         }
 
         private bool soloNumeros(string cadena)
         {
-            foreach(char caracter in cadena)
+            foreach (char caracter in cadena)
             {
                 if (!(char.IsNumber(caracter)))
                     return false;
@@ -211,7 +217,7 @@ namespace Winform_App
 
                 MessageBox.Show(ex.ToString());
             }
-            
+
         }
 
         private void textBox_filtro_rapido_KeyPress(object sender, EventArgs e)
@@ -263,7 +269,7 @@ namespace Winform_App
                     comboBox_filtro_criterio.Items.Add("Contiene ");
 
                     break;
-                
+
                 case "Nombre":
 
                     comboBox_filtro_criterio.Items.Clear();
@@ -304,7 +310,7 @@ namespace Winform_App
                     comboBox_filtro_criterio.Items.Clear();
                     comboBox_filtro_criterio.Items.Add("Menor a ");
                     comboBox_filtro_criterio.Items.Add("Mayor a ");
-            
+
 
                     break;
 
@@ -324,5 +330,10 @@ namespace Winform_App
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             detalle.ShowDialog();
         }
+
+
     }
+
+
 }
+

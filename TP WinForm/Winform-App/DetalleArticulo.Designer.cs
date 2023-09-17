@@ -57,6 +57,7 @@
             this.pictureBox_Imagen_detalle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_Imagen_detalle.TabIndex = 33;
             this.pictureBox_Imagen_detalle.TabStop = false;
+            this.pictureBox_Imagen_detalle.Click += new System.EventHandler(this.pictureBox_Imagen_detalle_Click);
             // 
             // label_Categoría_detalle
             // 
@@ -81,7 +82,7 @@
             this.button_volver.Location = new System.Drawing.Point(425, 279);
             this.button_volver.Name = "button_volver";
             this.button_volver.Size = new System.Drawing.Size(75, 23);
-            this.button_volver.TabIndex = 26;
+            this.button_volver.TabIndex = 9;
             this.button_volver.Text = "Volver";
             this.button_volver.UseVisualStyleBackColor = true;
             this.button_volver.Click += new System.EventHandler(this.button_volver_Click);
@@ -91,7 +92,7 @@
             this.textBox_Precio_detalle.Location = new System.Drawing.Point(121, 133);
             this.textBox_Precio_detalle.Name = "textBox_Precio_detalle";
             this.textBox_Precio_detalle.Size = new System.Drawing.Size(121, 20);
-            this.textBox_Precio_detalle.TabIndex = 24;
+            this.textBox_Precio_detalle.TabIndex = 3;
             // 
             // label_Precio_detalle
             // 
@@ -107,21 +108,21 @@
             this.textBox_Nombre_detalle.Location = new System.Drawing.Point(121, 59);
             this.textBox_Nombre_detalle.Name = "textBox_Nombre_detalle";
             this.textBox_Nombre_detalle.Size = new System.Drawing.Size(121, 20);
-            this.textBox_Nombre_detalle.TabIndex = 22;
+            this.textBox_Nombre_detalle.TabIndex = 1;
             // 
             // textBox_Descripcion_detalle
             // 
             this.textBox_Descripcion_detalle.Location = new System.Drawing.Point(121, 97);
             this.textBox_Descripcion_detalle.Name = "textBox_Descripcion_detalle";
             this.textBox_Descripcion_detalle.Size = new System.Drawing.Size(121, 20);
-            this.textBox_Descripcion_detalle.TabIndex = 21;
+            this.textBox_Descripcion_detalle.TabIndex = 2;
             // 
             // textBox_Codigo_detalle
             // 
             this.textBox_Codigo_detalle.Location = new System.Drawing.Point(121, 25);
             this.textBox_Codigo_detalle.Name = "textBox_Codigo_detalle";
             this.textBox_Codigo_detalle.Size = new System.Drawing.Size(121, 20);
-            this.textBox_Codigo_detalle.TabIndex = 20;
+            this.textBox_Codigo_detalle.TabIndex = 0;
             // 
             // label_Descripcion_detalle
             // 
@@ -155,14 +156,14 @@
             this.textBox_Marca_detalle.Location = new System.Drawing.Point(121, 200);
             this.textBox_Marca_detalle.Name = "textBox_Marca_detalle";
             this.textBox_Marca_detalle.Size = new System.Drawing.Size(121, 20);
-            this.textBox_Marca_detalle.TabIndex = 34;
+            this.textBox_Marca_detalle.TabIndex = 5;
             // 
             // textBox_Categoria_detalle
             // 
             this.textBox_Categoria_detalle.Location = new System.Drawing.Point(121, 236);
             this.textBox_Categoria_detalle.Name = "textBox_Categoria_detalle";
             this.textBox_Categoria_detalle.Size = new System.Drawing.Size(121, 20);
-            this.textBox_Categoria_detalle.TabIndex = 35;
+            this.textBox_Categoria_detalle.TabIndex = 6;
             // 
             // label_Imagen_detalle
             // 
@@ -178,14 +179,14 @@
             this.textBox_URLimagen_detalle.Location = new System.Drawing.Point(121, 164);
             this.textBox_URLimagen_detalle.Name = "textBox_URLimagen_detalle";
             this.textBox_URLimagen_detalle.Size = new System.Drawing.Size(121, 20);
-            this.textBox_URLimagen_detalle.TabIndex = 32;
+            this.textBox_URLimagen_detalle.TabIndex = 4;
             // 
             // button_SiguienteFoto
             // 
             this.button_SiguienteFoto.Location = new System.Drawing.Point(506, 133);
             this.button_SiguienteFoto.Name = "button_SiguienteFoto";
             this.button_SiguienteFoto.Size = new System.Drawing.Size(30, 20);
-            this.button_SiguienteFoto.TabIndex = 36;
+            this.button_SiguienteFoto.TabIndex = 7;
             this.button_SiguienteFoto.Text = "->";
             this.button_SiguienteFoto.UseVisualStyleBackColor = true;
             this.button_SiguienteFoto.Click += new System.EventHandler(this.button_SiguienteFoto_Click);
@@ -195,9 +196,10 @@
             this.button_AnteriorFoto.Location = new System.Drawing.Point(259, 132);
             this.button_AnteriorFoto.Name = "button_AnteriorFoto";
             this.button_AnteriorFoto.Size = new System.Drawing.Size(30, 20);
-            this.button_AnteriorFoto.TabIndex = 37;
+            this.button_AnteriorFoto.TabIndex = 8;
             this.button_AnteriorFoto.Text = "<-";
             this.button_AnteriorFoto.UseVisualStyleBackColor = true;
+            this.button_AnteriorFoto.Click += new System.EventHandler(this.button_AnteriorFoto_Click);
             // 
             // DetalleArticulo
             // 
